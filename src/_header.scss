@@ -1,0 +1,40 @@
+.header {
+  background-color: $bg-yellow;
+  &__nav {
+    max-width: 1000px;
+    height: 100px;
+    display: flex;
+    .header-logo {
+
+      &__image {
+
+      }
+    }
+    .nav-menu {
+      display: flex;
+      &__list {
+
+        &--white {
+          background-color: $bg-white;
+        }
+      }
+    }
+  }
+  .catch-copy {
+
+    &__title {
+
+    }
+    &__description {
+
+    }
+    &__download {
+
+    }
+  }
+  .top-image-wrap {
+    &__image {
+
+    }
+  }
+}

@@ -1,0 +1,27 @@
+//小デバイス（横向きモバイル,576px以上）
+@mixin sm {
+	@media screen and (min-width: 576px) {
+		@content;
+	}
+}
+
+//中デバイス（タブレット,768px以上）
+@mixin md {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+//大デバイス（デスクトップ,992px以上）
+@mixin lg {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+//特大デバイス（ワイドデスクトップ,1200px以上）
+@mixin xl {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
