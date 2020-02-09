@@ -2,23 +2,32 @@
   background-color: $yellow;
   position: relative;
   height: 630px;
+  @include sp {
+    height: 100%;
+  }
   &__wrap {
     max-width: 1000px;
     margin: auto;
   }
   &__nav {
-    // max-width: 1000px;
     padding: 40px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include sp {
+      padding: 40px 20px;
+    }
     .header-logo {
+      width: 100%;
       &__image {
-        width: 100%;
+        max-width: 100%;
       }
     }
     .nav-menu {
       display: flex;
+      @include sp {
+        display: none;
+      }
       &__list {
         width: 150px;
         &--white {
@@ -42,7 +51,14 @@
   }
   .description-wrap {
     display: flex;
+    @include sp {
+      display: block;
+    }
     .catch-copy {
+      @include sp {
+        margin-bottom: 50px;
+        text-align: center;
+      }
       &__title {
         font-size: 4rem;
         color: $white;
@@ -54,12 +70,16 @@
         line-height: 1.5em;
         color: $white;
         margin-bottom: 1.5rem;
-        &--pc {
-          display: none;
+        @include sp {
+          text-align: left;
+          padding: 0 30px;
         }
-        @include md {
-          .catch-copy__description--pc {
-            display: block;
+        &--pc {
+          @include pc {
+              display: block;
+          }
+          @include sp {
+            display: none;
           }
         }
       }
@@ -75,8 +95,22 @@
     .top-image-wrap {
       position: absolute;
       right: 0;
+      @include sp {
+        position: static;
+        padding-bottom: 100px;
+      }
       &__image {
-        width: 100%;
+        max-width: 100%;
+        &--pc-none {
+          @include pc {
+          display: none;
+          }
+        }
+        &--sp-none {
+          @include sp {
+          display: none;
+          }
+        }
       }
       &:after {
         content: '';

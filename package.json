@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development",
-    "watch": "webpack --watch",
+    "watch": "webpack --mode=development --watch",
 		"wds": "webpack-dev-server"
   },
   "license": "MIT",
