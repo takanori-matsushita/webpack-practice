@@ -18,15 +18,36 @@
             <img class="header-logo__imgage" src="assets/images/logo.png" alt="">
           </div>
           <ul class="nav-menu">
-            <li class="nav-menu__list"><a class="nav-menu__list__link" href="#">シメシについて</a></li>
-            <li class="nav-menu__list"><a class="nav-menu__list__link" href="#">よくある質問</a class="nav-menu__list__link">
+            <li class="nav-menu__list">
+              <a class="nav-menu__list__link" href="#">シメシについて</a>
             </li>
-            <li class="nav-menu__list"><a class="nav-menu__list__link" href="#">お問い合わせ</a class="nav-menu__list__link">
+            <li class="nav-menu__list">
+              <a class="nav-menu__list__link" href="#">よくある質問</a>
             </li>
-            <li class="nav-menu__list nav-menu__list--white"><a
-                class="nav-menu__list__link nav-menu__list__link--yellow" href="#">ダウンロード</a
-                class="nav-menu__list__link"></li>
+            <li class="nav-menu__list">
+              <a class="nav-menu__list__link" href="#">お問い合わせ</a>
+            </li>
+            <li class="nav-menu__list nav-menu__list--white">
+              <a class="nav-menu__list__link nav-menu__list__link--yellow" href="#">ダウンロード</a>
+            </li>
           </ul>
+          <div :class="{'nav-menu--sp': true, 'nav-menu--active': isActive}" @click="navOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="nav-menu__sp-show" v-show="navShow">
+            <div class="logo-yellow">
+              <img src="assets/images/logo-yellow.png" alt="" class="logo-yellow__image">
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="sp-lists">
+              <li class="sp-lists__list"><a href="#">シメシについて</a></li>
+              <li class="sp-lists__list"><a href="#">よくある質問</a></li>
+              <li class="sp-lists__list"><a href="#">お問い合わせ</a></li>
+            </ul>
+          </div>
         </nav>
         <div class="description-wrap">
           <div class="catch-copy">
@@ -42,7 +63,7 @@
               alt="">
           </div>
         </div>
-      </div>
+        </divc>
     </header>
     <main class="main" role="main">
       <section id="about">
